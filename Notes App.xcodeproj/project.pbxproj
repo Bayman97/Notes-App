@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		39AFFD3725722BAC004D20CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39AFFD3525722BAC004D20CD /* Main.storyboard */; };
 		39AFFD3925722BAD004D20CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AFFD3825722BAD004D20CD /* Assets.xcassets */; };
 		39AFFD3C25722BAD004D20CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39AFFD3A25722BAD004D20CD /* LaunchScreen.storyboard */; };
+		39AFFD462574A277004D20CD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 39AFFD452574A277004D20CD /* Alamofire */; };
+		39AFFD492574A28B004D20CD /* APIFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AFFD482574A28B004D20CD /* APIFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		39AFFD3825722BAD004D20CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39AFFD3B25722BAD004D20CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39AFFD3D25722BAD004D20CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39AFFD482574A28B004D20CD /* APIFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39AFFD462574A277004D20CD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +67,7 @@
 				39AFFD3825722BAD004D20CD /* Assets.xcassets */,
 				39AFFD3A25722BAD004D20CD /* LaunchScreen.storyboard */,
 				39AFFD3D25722BAD004D20CD /* Info.plist */,
+				39AFFD482574A28B004D20CD /* APIFunctions.swift */,
 			);
 			path = "Notes App";
 			sourceTree = "<group>";
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = "Notes App";
+			packageProductDependencies = (
+				39AFFD452574A277004D20CD /* Alamofire */,
+			);
 			productName = "Notes App";
 			productReference = 39AFFD2C25722BAC004D20CD /* Notes App.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 39AFFD2325722BAC004D20CD;
+			packageReferences = (
+				39AFFD442574A277004D20CD /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 39AFFD2D25722BAC004D20CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39AFFD492574A28B004D20CD /* APIFunctions.swift in Sources */,
 				39AFFD3425722BAC004D20CD /* ViewController.swift in Sources */,
 				39AFFD3025722BAC004D20CD /* AppDelegate.swift in Sources */,
 				39AFFD3225722BAC004D20CD /* SceneDelegate.swift in Sources */,
@@ -339,6 +351,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		39AFFD442574A277004D20CD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		39AFFD452574A277004D20CD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39AFFD442574A277004D20CD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 39AFFD2425722BAC004D20CD /* Project object */;
 }
