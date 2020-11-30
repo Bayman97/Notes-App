@@ -16,6 +16,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // this is an array of Note objects
     var notesArray = [Note]()
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        let vc = segue.destination as! AddNoteViewController
+
+        // only if a table view cell is clicked
+        if segue.identifier == "updateNoteSegue" {
+            // passes the note object to the AddNoteViewController
+            vc.note = notesArray[notesTableView.indexPathForSelectedRow!.row]
+            vc.update = true 
+        }
+    }
+
     // this function creates one row for each element in the array
     // This delegate function asks "How many rows do you want to display?"
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,6 +44,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBOutlet weak var notesTableView: UITableView!
 
+    override func viewWillAppear(_ animated: Bool) {
+        APIFunctions.functions.fetchNotes()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        APIFunctions.functions.fetchNotes()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

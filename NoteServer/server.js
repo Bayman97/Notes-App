@@ -75,7 +75,7 @@ app.get('/fetch', function(req, res){
 // POST request  
 app.post("/delete", function(req, res){
     Data.findOneAndRemove({
-        _id: req.get("_id")
+        _id: req.get("id")
 
     }, function(err) {
         // only happens if fails to get id 
@@ -90,7 +90,7 @@ app.post("/update", function(req, res) {
     // id is the first {}
     // new data is second {}
     Data.findOneAndUpdate({
-        _id: req.get("_id")
+        _id: req.get("id")
     },{
         note: req.get("note"),
         title: req.get("title"),

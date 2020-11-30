@@ -42,4 +42,30 @@ class APIFunctions {
             self.delegate?.updateArray(newArray: data!)
         }
     }
+
+
+    func addNote(date: String, title:String, note: String) {
+
+        AF.request("http://10.0.0.29:8081/create",method: .post, encoding: URLEncoding.httpBody, headers: ["title": title, "date": date, "note": note]).responseJSON {
+            response in
+            print(response)
+
+        }
+    }
+
+    func updateNote(date: String, title: String, note: String, id: String) {
+
+        AF.request("http://10.0.0.29:8081/update", method: .post, encoding: URLEncoding.httpBody, headers: ["title": title, "date": date, "note": note, "id": id] ).responseJSON {
+            response in
+            print(response)
+        }
+    }
+
+    func deleteNote(id: String) {
+
+        AF.request("http://10.0.0.29:8081/delete", method: .post, encoding: URLEncoding.httpBody, headers: [ "id": id] ).responseJSON {
+            response in
+            print(response)
+        }
+    }
 }
