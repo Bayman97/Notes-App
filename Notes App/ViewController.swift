@@ -37,8 +37,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // in the table view we have cells, each on is labeled "prototypeCell"
     // This delegate function asks "What do you want to display in each row?"
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCell", for: indexPath)
-        cell.textLabel?.text = notesArray[indexPath.row].title
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "prototypeCell", for: indexPath) as! NotePrototypeCell
+
+        cell.titleLabel.text = notesArray[indexPath.row].title
+        cell.noteLabel.text = notesArray[indexPath.row].note
+        cell.dateLabel.text = notesArray[indexPath.row].date
+
         return cell
     }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		393015792574B96E00014CD0 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393015782574B96E00014CD0 /* AddNoteViewController.swift */; };
+		395278A42576182E00CC1973 /* NotePrototypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395278A32576182E00CC1973 /* NotePrototypeCell.swift */; };
 		39AFFD3025722BAC004D20CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AFFD2F25722BAC004D20CD /* AppDelegate.swift */; };
 		39AFFD3225722BAC004D20CD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AFFD3125722BAC004D20CD /* SceneDelegate.swift */; };
 		39AFFD3425722BAC004D20CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AFFD3325722BAC004D20CD /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		393015782574B96E00014CD0 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		395278A32576182E00CC1973 /* NotePrototypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePrototypeCell.swift; sourceTree = "<group>"; };
 		39AFFD2C25722BAC004D20CD /* Notes App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Notes App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39AFFD2F25722BAC004D20CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39AFFD3125722BAC004D20CD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				39AFFD3125722BAC004D20CD /* SceneDelegate.swift */,
 				39AFFD3325722BAC004D20CD /* ViewController.swift */,
 				393015782574B96E00014CD0 /* AddNoteViewController.swift */,
+				395278A32576182E00CC1973 /* NotePrototypeCell.swift */,
 				39AFFD3525722BAC004D20CD /* Main.storyboard */,
 				39AFFD482574A28B004D20CD /* APIFunctions.swift */,
 				39AFFD3825722BAD004D20CD /* Assets.xcassets */,
@@ -155,6 +158,7 @@
 				39AFFD3425722BAC004D20CD /* ViewController.swift in Sources */,
 				39AFFD3025722BAC004D20CD /* AppDelegate.swift in Sources */,
 				393015792574B96E00014CD0 /* AddNoteViewController.swift in Sources */,
+				395278A42576182E00CC1973 /* NotePrototypeCell.swift in Sources */,
 				39AFFD3225722BAC004D20CD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

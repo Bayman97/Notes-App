@@ -32,7 +32,7 @@ class APIFunctions {
         // function uses fetch route to retrieve the data from the server
         AF.request("http://10.0.0.29:8081/fetch").response {
             response in
-            print(response.data!)
+            print(response)
 
             // encodes the data with utf8 encoding for easy parsing
             let data  = String(data: response.data!, encoding: .utf8)

@@ -20,14 +20,48 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="prototypeCell" id="XcI-De-nJ9">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="prototypeCell" rowHeight="209" id="XcI-De-nJ9" customClass="NotePrototypeCell" customModule="Notes_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="209"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XcI-De-nJ9" id="5Ls-Gi-gka">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="209"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aix-XJ-Nda">
+                                                    <rect key="frame" x="20" y="11" width="374" height="187"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKb-7V-QSv">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="62.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxT-AP-qNo">
+                                                            <rect key="frame" x="0.0" y="62.5" width="374" height="62"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVe-dZ-hQv">
+                                                            <rect key="frame" x="0.0" y="124.5" width="374" height="62.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="aix-XJ-Nda" secondAttribute="trailing" id="70r-xL-ET6"/>
+                                                <constraint firstItem="aix-XJ-Nda" firstAttribute="leading" secondItem="5Ls-Gi-gka" secondAttribute="leadingMargin" id="Wyg-gW-UcL"/>
+                                                <constraint firstItem="aix-XJ-Nda" firstAttribute="top" secondItem="5Ls-Gi-gka" secondAttribute="topMargin" id="nQd-aD-rk0"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="aix-XJ-Nda" secondAttribute="bottom" id="nbW-8u-Fq8"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLabel" destination="pVe-dZ-hQv" id="Yfa-Fm-C9K"/>
+                                            <outlet property="noteLabel" destination="ZxT-AP-qNo" id="c6e-WT-QgQ"/>
+                                            <outlet property="titleLabel" destination="IKb-7V-QSv" id="ZUe-BK-iYl"/>
                                             <segue destination="IUt-Az-7LM" kind="show" identifier="updateNoteSegue" id="RIK-sG-tmh"/>
                                         </connections>
                                     </tableViewCell>
